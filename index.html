@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JComUI</title>
+    <link rel="stylesheet" href="./css/buttonCom.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/progessCom.css">
+</head>
+<body>
+    <h2>基础用法</h2>
+  <jc-button >默认按钮</jc-button>
+  <jc-button  type="primary">主要按钮</jc-button>
+  <jc-button  type="success">成功按钮</jc-button>
+  <jc-button  type="info">信息按钮</jc-button>
+  <jc-button  type="warning">信息按钮</jc-button>
+  <jc-button  type="danger">危险按钮</jc-button>
+
+  <br>
+  <br>
+
+  <jc-button plain>朴素按钮</jc-button>
+  <jc-button type="primary" plain>主要按钮</jc-button>
+  <jc-button type="success" plain>成功按钮</jc-button>
+  <jc-button type="info" plain>信息按钮</jc-button>
+  <jc-button type="warning" plain>信息按钮</jc-button>
+  <jc-button type="danger" plain>危险按钮</jc-button>
+
+  <br>
+  <br>
+
+  <jc-button round>圆角按钮</jc-button>
+  <jc-button type="primary" round>主要按钮</jc-button>
+  <jc-button type="success" round>成功按钮</jc-button>
+  <jc-button type="info" round>信息按钮</jc-button>
+  <jc-button type="warning" round>警告按钮</jc-button>
+  <jc-button type="danger" round>危险按钮</jc-button>
+
+  <br>
+  <br>
+
+  <jc-button circle></jc-button>
+  <jc-button type="primary" circle></jc-button>
+  <jc-button type="success" circle></jc-button>
+  <jc-button type="info" circle></jc-button>
+  <jc-button type="warning" circle></jc-button>
+  <jc-button type="danger" circle></jc-button>
+
+  <br>
+  <br>
+
+  <h2>禁用状态</h2>
+  <jc-button disabled>默认按钮</jc-button>
+  <jc-button type="primary" disabled>主要按钮</jc-button>
+  <jc-button type="success" disabled>成功按钮</jc-button>
+  <jc-button type="info" disabled>信息按钮</jc-button>
+  <jc-button type="warning" disabled>警告按钮</jc-button>
+  <jc-button type="danger" disabled>危险按钮</jc-button>
+
+  <br>
+  <br>
+
+  <jc-button plain disabled>朴素按钮</jc-button>
+  <jc-button type="primary" plain disabled>主要按钮</jc-button>
+  <jc-button type="success" plain disabled>成功按钮</jc-button>
+  <jc-button type="info" plain disabled>信息按钮</jc-button>
+  <jc-button type="warning" plain disabled>警告按钮</jc-button>
+  <jc-button type="danger" plain disabled>危险按钮</jc-button>
+
+  <br>
+  <br>
+
+  <h2>文字按钮</h2>
+  <jc-button type="text">文字按钮</jc-button>
+  <jc-button type="text" disabled>文字按钮</jc-button>
+
+  <h2>不同尺寸</h2>
+  <jc-button>默认按钮</jc-button>
+  <jc-button size="medium">中等按钮</jc-button>
+  <jc-button size="small">小型按钮</jc-button>
+  <jc-button size="mini">超小按钮</jc-button>
+
+  <br>
+  <br>
+
+  <jc-button round>默认按钮</jc-button>
+  <jc-button size="medium" round>中等按钮</jc-button>
+  <jc-button size="small" round>小型按钮</jc-button>
+  <jc-button size="mini" round>超小按钮</jc-button>
+
+  <br>
+  <br>
+
+  <h2>进度条组件</h2>
+  <jc-progress percentage="50"></jc-progress>
+  <jc-progress percentage="70" status="success" stroke-width="10"></jc-progress>
+  <jc-progress percentage="40" status="exception" stroke-width="14"></jc-progress>
+  <jc-progress percentage="90" status="warning" stroke-width="8"></jc-progress>
+
+  <br>
+  <br>
+  
+  <jc-progress percentage="70" stroke-width="26" text-inside="true"></jc-progress>
+  <jc-progress percentage="30" stroke-width="26" text-inside="true" status="success"></jc-progress>
+  <jc-progress percentage="50" stroke-width="26" text-inside="true" status="exception"></jc-progress>
+  <jc-progress percentage="80" stroke-width="26" text-inside="true" status="warning"></jc-progress>
+
+  <script src="./js/component.js"></script>
+  <script src="./js/buttonCom.js"></script>
+  <script src="./js/progessCom.js"></script>
+</body>
+</html>
