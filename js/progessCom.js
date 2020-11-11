@@ -4,7 +4,7 @@ function JCProgress(el) {
 // 继承
 JCProgress.prototype = new Component();
 // // 注册属性
-let options = {
+let progressOptions = {
     name: 'jc-progress', //组件名称
     props: { // 注册特性
         percentage: {
@@ -55,7 +55,7 @@ let options = {
         this.el.outerHTML = template;
     }
 }
-Object.assign(JCProgress.prototype, options);
+Object.assign(JCProgress.prototype, progressOptions);
 console.log(JCProgress.prototype)
 
 var progressTagMap = document.getElementsByTagName('jc-progress');

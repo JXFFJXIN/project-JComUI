@@ -1,0 +1,54 @@
+.jc-popup {
+}
+.jc-popup .jc-popup--control{
+    /* background-color: rgba(100, 50, 20, .15); */
+}
+.jc-popup .jc-popup--shade{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.164);
+}
+.jc-popup .jc-popup--shade .jc-popup--pop{
+    position: absolute;
+    background: white;
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+}
+.jc-popup .jc-popup--control .jc-popup--btn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 2px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #409eff;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+    background-color: #409eff;
+    color: #fff;
+}
+.jc-popup .jc-popup--shade .jc-popup--pop .jc-popup--content{
+    padding-top: 20px;
+    margin: 0 auto;
+}
+.jc-popup .jc-popup--shade .jc-popup--pop .jc-popup--close{
+    position: absolute;
+    top: 5%;
+    left: 85%;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background:url(../image/closeBtn.png) 0 0 no-repeat;
+    float: right;
+    cursor: pointer;
+}
+.jc-popup .jc-popup--shade .jc-popup--pop .jc-popup--close:hover{
+    background-position: 0px -31px;
+}

@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JComUI</title>
-    <link rel="stylesheet" href="./css/buttonCom.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/progessCom.css">
-    <link rel="stylesheet" href="./css/popupCom.css">
-    <link rel="stylesheet" href="./css/returnTopCom.css">
-    <link rel="stylesheet" href="./css/hintCom.css">
-    <link rel="stylesheet" href="./css/calenderCom.css">
-    <link rel="stylesheet" href="./css/tabControl.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JComUI</title>
+  <link rel="stylesheet" href="./css/buttonCom.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/progessCom.css">
+  <link rel="stylesheet" href="./css/popupCom.css">
+  <link rel="stylesheet" href="./css/returnTopCom.css">
+  <link rel="stylesheet" href="./css/hintCom.css">
+  <link rel="stylesheet" href="./css/calenderCom.css">
+  <link rel="stylesheet" href="./css/tabControl.css">
 </head>
+
 <body>
-    <h2>基础用法</h2>
-  <jc-button >默认按钮</jc-button>
-  <jc-button  type="primary">主要按钮</jc-button>
-  <jc-button  type="success">成功按钮</jc-button>
-  <jc-button  type="info">信息按钮</jc-button>
-  <jc-button  type="warning">信息按钮</jc-button>
-  <jc-button  type="danger">危险按钮</jc-button>
+  <h2>基础用法</h2>
+  <jc-button>默认按钮</jc-button>
+  <jc-button type="primary">主要按钮</jc-button>
+  <jc-button type="success">成功按钮</jc-button>
+  <jc-button type="info">信息按钮</jc-button>
+  <jc-button type="warning">信息按钮</jc-button>
+  <jc-button type="danger">危险按钮</jc-button>
 
   <br>
   <br>
@@ -105,7 +107,7 @@
 
   <br>
   <br>
-  
+
   <jc-progress percentage="70" stroke-width="26" text-inside="true"></jc-progress>
   <jc-progress percentage="30" stroke-width="26" text-inside="true" status="success"></jc-progress>
   <jc-progress percentage="50" stroke-width="26" text-inside="true" status="exception"></jc-progress>
@@ -115,8 +117,15 @@
   <br>
 
   <h2>弹窗组件</h2>
-  <jc-popup>
-    <span>121212</span>
+  <jc-popup text='分享' width="400" >
+    <ul>
+      <li title="分享到QQ空间"><a href="#" class="share1"></a><span></span></li>
+      <li title="分享到微博"><a href="#" class="share2"></a><span></span></li>
+      <li title="分享到人人网"><a href="#" class="share3"></a><span></span></li>
+      <li title="分享到微信"><a href="#" class="share4"></a><span></span></li>
+      <li title="分享到腾讯微博"><a href="#" class="share5"></a><span></span></li>
+      <li title="分享到github"><a href="#" class="share6"></a><span></span></li>
+    </ul>
   </jc-popup>
 
   <br>
@@ -155,4 +164,5 @@
   <script src="./js/calenderCom.js"></script>
   <script src="./js/tabControl.js"></script>
 </body>
+
 </html>
