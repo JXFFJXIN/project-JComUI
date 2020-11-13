@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'iconfont';
+    /* project id 1564527 */
+    src: url('https://at.alicdn.com/t/font_1564527_h2bpydgx1xv.eot');
+    src: url('https://at.alicdn.com/t/font_1564527_h2bpydgx1xv.eot?#iefix') format('embedded-opentype'),
+        url('https://at.alicdn.com/t/font_1564527_h2bpydgx1xv.woff2') format('woff2'),
+        url('https://at.alicdn.com/t/font_1564527_h2bpydgx1xv.woff') format('woff'),
+        url('https://at.alicdn.com/t/font_1564527_h2bpydgx1xv.ttf') format('truetype'),
+        url('https://at.alicdn.com/t/font_1564527_h2bpydgx1xv.svg#iconfont') format('svg');
+}
+
+.jc-hint {}
+
+.jc-hint--show {
+    position: fixed;
+    display: none;
+    padding: 15px;
+    border: 1px solid;
+    left: 50%;
+    top: 50%;
+    transition: 0.2s;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+
+.jc-hint--icon {
+    font-family: iconfont;
+    display: inline-block;
+    margin: 0 7px;
+}
+
+.jc-hint--show.jc-hint--info {
+    border-color: #d8e3fd;
+    background-color: #edf2fc;
+    color: #727479;
+}
+
+.jc-hint--show.jc-hint--info .jc-hint--icon::before {
+    content: "\e6bc";
+}
+
+.jc-hint--show.jc-hint--success {
+    border-color: #e1f3d8;
+    background-color: #f0f9eb;
+    color: #67C23A;
+}
+
+.jc-hint--show.jc-hint--success .jc-hint--icon::before {
+    content: "\e61e";
+}
+
+.jc-hint--show.jc-hint--warn {
+    border-color: #faecd8;
+    background-color: #fdf6ec;
+    color: #E6A23C;
+}
+
+.jc-hint--show.jc-hint--warn .jc-hint--icon::before {
+    content: "\e604";
+}
+
+.jc-hint--show.jc-hint--error {
+    border-color: #fde2e2;
+    background-color: #fef0f0;
+    color: #F56C6C;
+}
+
+.jc-hint--show.jc-hint--error .jc-hint--icon::before {
+    content: "\e62b";
+}
+
+.jc-hint--btn {
+    display: inline-block;
+    background-color: rgb(28, 123, 200);
+    cursor: pointer;
+    color: seashell;
+    border-radius: 5px;
+}
+
+.jc-hint--btn.jc-hint--medium {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.jc-hint--btn.jc-hint--small {
+    padding: 9px 15px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+.jc-hint--btn.jc-hint--mini {
+    padding: 7px 15px;
+    font-size: 12px;
+    border-radius: 3px;
+}
