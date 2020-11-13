@@ -5,6 +5,7 @@ Component.prototype = {
         this.initData(el);// 运行initData方法挂载el属性
         this.getAttrVal();// 运行getAttrVal方法挂载props值
         this.render();// 运行render方法进行渲染（outerHTML）
+        this.event?this.event():'';
     },
     // 获取特性
     getAttrVal() {
@@ -48,4 +49,19 @@ Component.prototype = {
     initData(el) {
         this.el = el;
     },
+    _create(x){
+        return document.createElement(x);
+    },
+    _append(x,...y){
+        var len = y.length;
+        for(var i = 0; i < len; i ++){
+            x.appendChild(y[i]);
+        }
+    },
+    _class(x,...y){
+        var len = y.length;
+        for (var i = 0; i < len; i ++ ){
+            x.classList.add(y[i]);
+        }
+    }
 }
