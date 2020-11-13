@@ -228,3 +228,21 @@ h2 {
 .jc-popup ul li:hover span {
     opacity: 0.2;
 }
+
+.jc-returntop--circle {
+    display: inline-block;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: 5px solid rgb(1, 149, 218);
+}
+.jc-returntop--circle::before{
+    content: '';
+    display: inline-block;
+    margin-left: 1px;
+    margin-top: 1px;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    border: 4px solid rgb(43, 124, 161);
+}
