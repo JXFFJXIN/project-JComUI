@@ -1,0 +1,41 @@
+.jc-tabcontrol{
+    margin: 10px;
+}
+.jc-tabcontrol .jc-tabcontrol--nav{
+    position: relative;
+}
+.jc-tabcontrol .jc-tabcontrol--nav .jc-tabcontrol--li{
+    width: 200px;
+    color: #fff;
+    font-size: 14px;
+}
+.jc-tabcontrol .jc-tabcontrol--nav .jc-tabcontrol--li .jc-tabcontrol--item{
+    width: 200px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    line-height: 32px;
+    background:#409eff;
+}
+.jc-tabcontrol .jc-tabcontrol--nav .jc-tabcontrol--li .jc-tabcontrol--content{
+    width: 1030px;
+    height: 320px;
+
+    position: absolute;
+    left: 200px;
+    top: 0;
+    background: rgb(125, 166, 194);
+
+    padding: 20px;
+    font-size: 14px;
+    box-sizing: border-box;
+
+    display: none;
+}
+
+.jc-tabcontrol .jc-tabcontrol--nav .jc-tabcontrol--li:hover .jc-tabcontrol--item{
+    background:  rgb(125, 166, 194);
+    color:  #409eff;
+}
+.jc-tabcontrol .jc-tabcontrol--nav .jc-tabcontrol--li:hover .jc-tabcontrol--content{
+    display: block;
+}

@@ -62,5 +62,5 @@ Component.prototype = {
         for (var i = 0; i < len; i ++ ){
             x.classList.add(y[i]);
         }
-    }
+    },
 }
