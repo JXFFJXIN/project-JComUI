@@ -36,7 +36,8 @@ var pagingOptions = {
         panelNumber:{
             type:Number,
             default:10,
-        }
+        },
+        
     },
     oPaging:document.createElement('div'),
     _createPagerItem(content,...extraClassName){
@@ -79,15 +80,17 @@ var pagingOptions = {
             page = pageNumber; //页码为最大页码
         }
     
-        if (this.options.current === page) {
+        if (this.current === page) {
             //页码无变化
             return;
         }
         this.current = page;
         this.render();
     },
+    rendered:false,
     render() {
         this.oPaging.innerHTML = '';
+        this._class(this.oPaging,'jc-paging')
         var disabled = '';
         if(this.current === 1){
             disabled = 'disabled';
@@ -96,9 +99,9 @@ var pagingOptions = {
         this._createPagerItem(this.prevText,'prev',disabled);
         this._createNumbers();
         var pageNumber = this._getPageNumber();
-        disable = "";
+        disabled = "";
         if (this.current === pageNumber){
-            disable = ' disabled'
+            disabled = 'disabled'
         }
         this._createPagerItem(this.nextText,'next',disabled);
         this._createPagerItem(this.lastText,'last',disabled);
@@ -106,32 +109,33 @@ var pagingOptions = {
         span.className = 'jc-paging--text';
         span.innerHTML = `<i class="current">${this.current}</i> / <i class="total">${pageNumber}</i>`
         this._append(this.oPaging,span);
-        this.el.outerHTML = this.oPaging.outerHTML;
-        
-    },
-    event(){
-        console.log(this.event)
+        var startHTML = document.getElementsByClassName('jc-paging')[0];
+        if(!this.rendered){
+            this.el.outerHTML = this.oPaging.outerHTML;
+            this.rendered = true;
+        }else{
+            startHTML.outerHTML = this.oPaging.outerHTML
+        }
         var that = this;
-        console.log(this.oPaging)
-        this.oPaging.onclick=function (e){
-            console.log(e.target)
-           if(e.target.classList.contains('first')){
+        var opage = document.getElementsByClassName('jc-paging')[0];
+        opage.onclick=function (e){
+           if(e.target.classList.contains('jc-paging--first')){
                that._toPage(1);
            }
-           else if (e.target.classList.contains('prev')) {
-               that._toPage(that.current + 1);
+           else if (e.target.classList.contains('jc-paging--prev')) {
+               that._toPage(that.current - 1);
            }
-           else if (e.target.classList.contains('next')) {
+           else if (e.target.classList.contains('jc-paging--next')) {
                 that._toPage(that.current +1);
            }
-           else if (e.target.classList.contains('last')) {
+           else if (e.target.classList.contains('jc-paging--last')) {
                that._toPage(that._getPageNumber());
            }
-           else if (e.target.classList.contains('number')) {
+           else if (e.target.classList.contains('jc-paging--number')) {
                that._toPage(+e.target.innerText);
            }
         }
-    }
+    },
 }
 Object.assign(JCPaging.prototype, pagingOptions)
 

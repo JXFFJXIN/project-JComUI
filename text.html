@@ -6,15 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="top">
-        <div id="next">
+    <div id="a">
+        <div id="b">
+            <div class="bottom" style="display: block;"></div>
+        </div>
+        <div id="c">
+            <div class="bottom" style="display: block;"></div>
+        </div>
+        <div id="d">
             <div class="bottom" style="display: block;"></div>
         </div>
     </div>
     <script>
-        var topB = document.getElementById('top')
-        var next = document.getElementById('next')
-        console.log(topB.parentElement)
+        var a = document.getElementById('a')
+        a.onclick = function (e) {
+            console.log(e.target)
+        }
+        
     </script>
 </body>
 </html>
