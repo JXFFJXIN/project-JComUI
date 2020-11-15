@@ -47,6 +47,16 @@ Component.prototype = {
     // 挂载el属性
     initData(el) {
         this.el = el;
+        if(!this.data) {
+            return;
+        }
+        // 获取data集合中的key键
+        var datakey = Object.keys(this.data)
+        console.log(datakey);
+        for (var i = 0; i < datakey.length; i++) {
+            var datadata = this.data[datakey[i]];
+            this[datakey[i]] = datadata;
+        }
     },
     _create(x){
         return document.createElement(x);

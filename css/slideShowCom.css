@@ -1,0 +1,99 @@
+.jc-slideshow{
+    position: relative;
+    width:550px;
+    height: 242px;
+    margin: 100px auto;
+    overflow: hidden;
+}
+.jc-slideshow .jc-slideshow--ul{
+    position: absolute;
+    left: 0;
+    width: 3300px;
+    transition: left .2s;
+}
+.jc-slideshow .jc-slideshow--ul .jc-slideshow--li {
+    position: relative;
+    float: left;
+    width: 550px;
+    height: 242px;
+}
+.jc-slideshow .jc-slideshow--ul .jc-slideshow--li img {
+    width: 100%;
+    height: 100%;
+}
+.jc-slideshow .jc-slideshow--ul .jc-slideshow--li span {
+    position: absolute;
+    bottom: 6px;
+    left: 10px;
+    color: #fff;
+}
+.jc-slideshow .jc-slideshow--ul .jc-slideshow--li .jc-slideshow--mask {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 70px;
+    background-image: linear-gradient(rgba(0, 0, 0 , 0), rgba(0, 0, 0, .9));
+}
+.jc-slideshow .jc-slideshow--controllist {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0;
+}
+.jc-slideshow .jc-slideshow--controllist .index {
+    display: inline-block;
+    vertical-align: middle;
+    width: 6px;
+    height: 6px;
+    border: 2px solid transparent;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-left: 10px;
+    transition: all .2s;
+    cursor:pointer;
+}
+.jc-slideshow .jc-slideshow--controllist .index:hover {
+    border-color: #fff;
+    background-color: #73c9e5;
+}
+.jc-slideshow .jc-slideshow--controllist .index.active{
+    width: 15px;
+    height: 15px;
+    background-image: url('../image/icon_slide_selected.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+.jc-slideshow .jc-slideshow--controllist .index.active:hover {
+    background-color: transparent;
+    border-color: transparent;
+}
+.jc-slideshow:hover .jc-slideshow--controlbtn{
+    display: block;
+}
+.jc-slideshow .jc-slideshow--controlbtn{
+    display: none;
+}
+.jc-slideshow .jc-slideshow--controlbtn .jc-slideshow--btnitem{
+    position: absolute;
+    top: 100px;
+    background: rgba(0,0,0,.3);
+    font-size: 20px;
+    color:#73c9e5;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.jc-slideshow .jc-slideshow--controlbtn .jc-slideshow--btnitem:hover{
+    background: rgba(0,0,0,.5);
+}
+.jc-slideshow .jc-slideshow--controlbtn .jc-slideshow--btnleft {
+    left: 2px;
+}
+.jc-slideshow .jc-slideshow--controlbtn .jc-slideshow--btnright {
+    right: 2px;
+}
