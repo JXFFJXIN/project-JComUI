@@ -4,6 +4,7 @@ Component.prototype = {
     init(el) {
         this.initData(el);// 运行initData方法挂载el属性
         this.getAttrVal();// 运行getAttrVal方法挂载props值
+        this.compute();// 计算属性
         this.render();// 运行render方法进行渲染（outerHTML）
     },
     // 获取特性
@@ -56,6 +57,18 @@ Component.prototype = {
         for (var i = 0; i < datakey.length; i++) {
             var datadata = this.data[datakey[i]];
             this[datakey[i]] = datadata;
+        }
+    },
+    // 计算属性
+    compute(){
+        if(!this.computes){
+            return;
+        }
+        var computesKey = Object.keys(this.computes);
+        for (var i = 0; i < computesKey.length; i ++) {
+            var computesData = this.computes[computesKey[i]];
+            this[computesKey[i]] =computesData;
+            this[computesKey[i]] = this[computesKey[i]]();
         }
     },
     _create(x){

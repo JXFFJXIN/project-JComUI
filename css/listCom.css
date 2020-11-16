@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/iconfont.woff2') format('woff2'),
+        url('../font/iconfont.woff') format('woff'),
+        url('../font/iconfont.ttf') format('truetype'),
+        url('../font/iconfont.svg#iconfont') format('svg');
+}
+.jc-list{
+    width: 100%;
+    height: 100%;
+    background-color:rgb(199, 223, 255) ;
+    padding: 1px;
+}
+.jc-list ol {
+    width: 694px;
+    margin: 50px auto 0 auto;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,.5);
+    counter-reset:jxff;
+}
+.jc-list ol li {
+    padding: 16px 16px 16px 16px;
+    border-bottom: 1px solid #ebebeb;
+    display: flex;
+
+    position: relative;
+}
+.jc-list ol li .jc-list--rank{
+    padding-top: 16px;
+    width: 57px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #409eff;
+}
+.jc-list ol li .jc-list--rank:before {
+    counter-increment:jxff;
+    content: counter(jxff);
+}
+.jc-list ol li:nth-child(n+4) .jc-list--rank {
+    color: #999;
+}
+.jc-list ol li .jc-list--rank div.jc-list--new{
+    width: 19px;
+    height: 19px;
+    margin: 0 auto;
+    border-radius: 4px;
+    background-color: #409eff;
+    color: #fff;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 19px;
+    text-align: center;
+}
+.jc-list ol li .jc-list--content{
+    flex: 1 1;
+    overflow: hidden;
+}
+.jc-list ol li .jc-list--content h2 {
+    font-size: 18px;
+    line-height: 28px;
+
+    overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.jc-list ol li .jc-list--content h2 a {
+    color: #1a1a1a;
+}
+.jc-list ol li .jc-list--content p {
+    font-size: 15px;
+    line-height: 25px;
+    margin-top:2px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.jc-list ol li .jc-list--content p a {
+    color: #444;
+}
+.jc-list ol li .jc-list--tools {
+    position: absolute;
+    bottom: 16px;
+    color: #8590a6;
+    font-size: 14px;
+    display:flex;
+}
+.jc-list ol li .jc-list--tools span a {
+    color: #8590a6;
+}
+.jc-list ol li .jc-list--tools div:nth-child(2) {
+    margin-left: 30px;
+}
+.jc-list ol li .jc-list--tools .jc-list--iconfont {
+    font-family: "iconfont";
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.jc-list ol li .jc-list--img {
+    margin-left: 16px;
+}
+.jc-list ol li .jc-list--img img {
+    width: 190px;
+    height: 105px;
+    border-radius: 4px;
+}

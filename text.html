@@ -16,9 +16,14 @@
         <div id="d">
             <div class="bottom" style="display: block;"></div>
         </div>
+        
     </div>
     <script>
         var a = document.getElementById('a')
+        a.A = 0,
+        a.B = 1,
+        a.C = a.A + a.B;
+        console.log(a.C)
         a.onclick = function (e) {
             console.log(e.target)
         }

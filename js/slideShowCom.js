@@ -201,6 +201,7 @@ var slideShowOptions = {
                     }
                     console.log(bannerLength - 2)
                     toChange(i)
+
                 } else if (e.target.classList.contains("jc-slideshow--btnright")) {
                     i = that.current + 1;
                     if (i > bannerLength - 2) {
