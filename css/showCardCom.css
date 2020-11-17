@@ -1,0 +1,164 @@
+.jc-showcard{
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    background-color:rgb(199, 223, 255);
+    font-size: 0;
+}
+.jc-showcard--box{
+    position: relative;
+    width: 854px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/* 按钮
+    1. 定位
+    2. 父级高不固定居中
+    3. 文本竖直水平居中
+*/
+.jc-showcard .jc-showcard--box .jc-showcard--btn{
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: rgba(0,0,0,.7);
+    color: #409eff;
+    font-size: 20px;
+    cursor:pointer;
+    z-index: 1;
+    transition: all .2s;
+
+}
+.jc-showcard .jc-showcard--box .jc-showcard--btn.jc-showcard--prev{
+    left:-50px;
+
+}
+.jc-showcard .jc-showcard--box:hover .jc-showcard--btn.jc-showcard--prev{
+    left:2px
+}
+.jc-showcard .jc-showcard--box .jc-showcard--btn.jc-showcard--next{
+    right: -50px;
+}
+.jc-showcard .jc-showcard--box:hover .jc-showcard--btn.jc-showcard--next{
+    right: 2px;
+}
+/* 卡片单体结构设置 */
+.jc-showcard .jc-showcard--box .jc-showcard--videoBox{
+    /* 854 = 206*4 + 5*2*3 */
+    position: relative;
+
+    display: inline-block;
+    width: 206px;
+    height: 116px;
+
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+
+    vertical-align: top;
+}
+.jc-showcard .jc-showcard--box .jc-showcard--videoBox.jc-showcard--video0{
+    margin-left: 0;
+}
+.jc-showcard .jc-showcard--box .jc-showcard--videoBox.jc-showcard--video3{
+    margin-right: 0;
+}
+/* 卡片内容设置 */
+.jc-showcard .jc-showcard--box .jc-showcard--videoBox .jc-showcard--infoBox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.jc-showcard .jc-showcard--box .jc-showcard--videoBox .jc-showcard--infoBox::before {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    content: '';
+    display: none;  
+}
+.jc-showcard .jc-showcard--box .jc-showcard--videoBox .jc-showcard--infoBox .jc-showcard--href::before {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 48px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .8));
+    content: '';
+}
+.jc-showcard .jc-showcard--box .jc-showcard--videoBox .jc-showcard--infoBox .jc-showcard--href .jc-showcard--poster {
+    width: 100%;
+    height: 100%;
+}
+.jc-showcard .jc-showcard--box .jc-showcard--videoBox .jc-showcard--infoBox .jc-showcard--href .jc-showcard--info {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    transition: top .4s;
+}
+.jc-showcard .jc-showcard--box .jc-showcard--videoBox .jc-showcard--infoBox .jc-showcard--href .jc-showcard--info .jc-showcard--title {
+    font-size: 14px;
+    color: #fff;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 6px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.jc-showcard .jc-showcard--box .jc-showcard--videoBox .jc-showcard--infoBox .jc-showcard--href .jc-showcard--info .jc-showcard--up, 
+.jc-showcard .jc-showcard--box .jc-showcard--videoBox .jc-showcard--infoBox .jc-showcard--href .jc-showcard--info .jc-showcard--play {
+    color: #d9ecff;
+    margin: 3px 5px;
+}
+.jc-showcard .jc-showcard--box .jc-showcard--videoBox:hover .jc-showcard--infoBox::before {
+    display: block;
+}
+.jc-showcard .jc-showcard--box .jc-showcard--videoBox:hover .jc-showcard--infoBox .jc-showcard--href .jc-showcard--info {
+    top:0;
+}
+.jc-showcard .jc-showcard--box .jc-showcard--videoBox:hover .jc-showcard--infoBox .jc-showcard--href .jc-showcard--title {
+    white-space:normal;
+}
+.jc-showcard .jc-showcard--box .jc-showcard--videoBox .jc-showcard--watch {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 28px;
+    height: 28px;
+    background-image: url(../image/play.png);
+    background-color: rgba(0,0,0,.7);
+    opacity: 0;
+    transition: opacity .2s;
+    z-index:2;
+}
+.jc-showcard .jc-showcard--box .jc-showcard--videoBox .jc-showcard--watch::before {
+    content: '稍后再看';
+    position: absolute;
+    top: -30px;
+    left: -15px;
+    width: 50px;
+    padding: 5px;
+    font-size:12px;
+    color: #fff;
+    background-color: rgba(0,0,0,.7);
+    display: none;
+}
+.jc-showcard .jc-showcard--box .jc-showcard--videoBox .jc-showcard--watch:hover::before{
+    display: block;
+}
+.jc-showcard .jc-showcard--box .jc-showcard--videoBox:hover .jc-showcard--watch {
+    opacity: 1;
+}

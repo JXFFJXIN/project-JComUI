@@ -319,6 +319,7 @@ var waterFallFlowOptions = {
         ],
         start:0,
         initRender:0,
+        template:'',
     },
     computes:{
         end(){
@@ -328,14 +329,13 @@ var waterFallFlowOptions = {
     render(){
         var maxCount = this.dataArr.length;
         var waterBox = this._create('div');
-        var template = '';
         var that = this;
         this._class(waterBox,'jc-water');
         var waterlist = this._create('ul');
         this._class(waterlist,'jc-water--ul')
         for (var i = this.start;i < this.end; i ++){
             var info = this.dataArr[i];
-            template +=`
+            this.template +=`
             <li class="jc-water--li">
                 <a href="${info.href}" class="jc-water--item">
                     <div class="jc-water--img">
@@ -349,7 +349,7 @@ var waterFallFlowOptions = {
             </li>
             `
         }
-        waterlist.innerHTML += template;
+        waterlist.innerHTML += this.template;
         var morestring = this._create('div');
         this._class(morestring,'jc-water--more');
         morestring.innerHTML = this.moretext
